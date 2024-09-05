@@ -2,7 +2,7 @@
     "name": "pytorch",
     "image": "pytorch-lt:12.4.1-cudnn-devel-ubuntu22.04",
     "workspaceFolder": "/work",
-    "workspaceMount": "src=/home/khaosjdr/work/sagemaker-trial,dst=/work,type=bind",
+    "workspaceMount": "src=${localEnv:HOME}/work/sagemaker-trial,dst=/work,type=bind",
     "runArgs": [
         "-it",
         "--rm",
@@ -17,6 +17,7 @@
                 "ms-python.python",
                 "ms-python.flake8",
                 "ms-python.autopep8",
+                "ms-python.debugpy",
                 "ms-python.isort"
             ],
             "settings": {
